@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            font-size: .8rem;
+            line-height: 18px;
+        }
+
+        .header {
+            background: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .row>.column {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            padding: 6px;
+        }
+
+        .row::after {
+            content: '';
+            display: table;
+            clear: both;
+
+
+        }
+
+        .footer {
+            background-color: #f1f1f1; 
+            padding: 8px;
+        }
+
+        @media(max-width:768px) {
+            .header{
+                font-size: 1.8rem;
+            }
+            .row>.column {
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 10px;
+                line-height: 20px;
+            }
+            .footer{
+                font-size: 1.3rem;
+                padding: 10px;
+
+            }
+        }
+        #right-col{
+            background: #ddd;
+        }
+        #middle-col{
+            background: #ccc;
+        }
+        #left-col{
+            background: #bbb
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="row">
+            <div class="column" id="left-col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magni dolorum illum iste nisi
+                    nesciunt culpa repudiandae harum provident. Culpa illo ut id modi reprehenderit quisquam hic
+                    aspernatur odio quidem!</p>
+            </div>
+            <div class="column" id="middle-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatem assumenda
+                explicabo deleniti minus numquam sunt qui rerum voluptate perferendis, sequi dignissimos ipsa. Suscipit
+                nemo consequatur minus ea. Illum, molestiae.</div>
+            <div class="column" id="right-col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis sint vero voluptas,
+                    nesciunt doloremque hic commodi nostrum doloribus unde saepe placeat officia fuga animi fugiat,
+                    molestiae aliquid esse? Vel?</p>
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
